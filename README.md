@@ -88,3 +88,43 @@ To satisfy the mandatory academic rubric, all models are evaluated across two fe
 - **Feature Selection & Analysis:** Implementing Mutual Information and RFE algorithms; generating feature correlation matrices and before/after comparison tables.
 - **Model Training & Hyperparameter Tuning:** Implementing Logistic Regression, Random Forest, and LightGBM models; tuning hyperparameters (tree depth, learning rate, regularization).
 - **Evaluation, Reporting & Presentation:** Compiling confusion matrices, ROC curves, writing the final IEEE-format academic report, and structuring presentation slides.
+
+---
+
+## 8. Quickstart & Repository Guide
+
+### Environment & Dataset Setup
+
+**Linux / macOS:**
+```bash
+chmod +x setup.sh
+./setup.sh
+source .venv/bin/activate
+```
+
+**Windows (CMD):**
+```bat
+setup.bat
+.venv\Scripts\activate
+```
+
+**Windows (PowerShell):**
+```powershell
+.\setup.ps1
+.\.venv\Scripts\Activate.ps1
+```
+
+Each setup script creates `.venv`, installs `requirements.txt`, registers the `Python (airline-dm)` Jupyter kernel, and downloads `train.csv` / `test.csv` into `data/raw/`.
+
+### Running the End-to-End Pipeline
+```bash
+python scripts/run_pipeline.py --check          # Validate stage notebooks
+python scripts/run_pipeline.py                  # Run stages 01 -> 06
+python scripts/run_pipeline.py --from 2 --to 4  # Run a subset of stages
+```
+
+### Project Documentation
+- [Development Plan & Milestones](docs/DEVELOPMENT_PLAN.md)
+- [Pipeline Artifact Contracts](docs/PIPELINE_SPEC.md)
+- [Git Workflow & Branching Rules](docs/GIT_WORKFLOW.md)
+- [AI Session Guide](docs/AI_SESSION_GUIDE.md) & [AGENTS.md](AGENTS.md)
