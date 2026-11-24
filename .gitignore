@@ -1,0 +1,44 @@
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Data files (downloaded/generated locally; keep .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/features/*
+!data/features/.gitkeep
+
+# Trained model binaries (keep .gitkeep & small JSON metadata)
+models/baseline/*
+!models/baseline/.gitkeep
+!models/baseline/*.json
+models/tuned/*
+!models/tuned/.gitkeep
+!models/tuned/*.json
+models/*.joblib
+models/*.pkl
+
+# Credentials & environment secrets
+.env
+kaggle.json
+*.key
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
